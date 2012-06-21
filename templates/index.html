@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>The Web Orchestra</title>
+		
+		<!-- Styles -->
+		<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/public/css/style.css" rel="stylesheet">
+		<link href="/public/css/bootstrap-responsive.min.css" rel="stylesheet">
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="container-fluid pagination-centered">
+			<h1 id="pagetitle">The Web Orchestra</h1>
+			
+			<div class="spacer50"></div>
+
+			<div id="login">
+				<p><input id="myName" type="text" value="Anonymous" class="input-medium" /></p>
+				<p><input id="start" type="button" value="avvia" class="btn btn-primary" /></p>
+			</div>
+			
+			<div id="panel"" class="hide">
+				<p>
+					<button class="sound btn" type="button" value="1" soundsrc="/public/sounds/01.mp3"><i class="icon-play"></i> 1</button>
+					<button class="sound btn" type="button" value="2" soundsrc="/public/sounds/02.mp3"><i class="icon-play"></i> 2</button>
+					<button class="sound btn" type="button" value="3" soundsrc="/public/sounds/03.mp3"><i class="icon-play"></i> 3</button>
+				</p>
+				
+				<div>
+					<h3>Connected clients</h3>
+					<ul id="connectedclients">
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<audio id="audio" />
+
+		<!-- Javascripts -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="/public/js/bootstrap/bootstrap-tab.js"></script>
+		<script type="text/javascript" src="/public/js/bootstrap/bootstrap-modal.js"></script>
+		<script type="text/javascript" src="/public/js/bootstrap/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="http://code.createjs.com/preloadjs-0.1.0.min.js"></script>
+		<script type="text/javascript" src="/public/js/createjs/soundjs-0.2.0.min.js"></script>
+		<script type="text/javascript" src="http://www.createjs.com/Demos/src/soundjs/HTMLAudioPlugin.js"></script>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/public/js/core.js"></script>
+	</body>
+</html>
